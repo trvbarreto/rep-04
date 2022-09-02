@@ -5,6 +5,11 @@ let numberOfSquares = 16;
 
 button.addEventListener('click', () => {
     numberOfSquares = prompt('Enter the number of squares on each side');
+
+    while (numberOfSquares < 1 || numberOfSquares > 100) {
+        numberOfSquares = prompt('Enter the number of squares on each side');
+    }
+
     clearMotherOfDivs();
     divGenerator();
 });
@@ -28,7 +33,7 @@ function divGenerator() {
 
         counter++;
     }
-}
+};
 
 function clearMotherOfDivs() {
     let child = motherOfDivs.lastElementChild;
@@ -37,6 +42,6 @@ function clearMotherOfDivs() {
         motherOfDivs.removeChild(child);
         child = motherOfDivs.lastElementChild;
     }
-}
+};
 
-divGenerator()
+divGenerator();
