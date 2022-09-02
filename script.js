@@ -1,27 +1,46 @@
 const motherOfDivs = document.querySelector('#container');
 const button = document.querySelector('button');
 
+let numberOfSquares = 16;
+
+button.addEventListener('click', () => {
+    numberOfSquares = prompt('Enter the number of squares on each side');
+    clearMotherOfDivs();
+    divGenerator();
+});
+
 function divGenerator() {
     let counter = 0;
 
-    while (counter < 256) {
+    while (counter < (numberOfSquares * numberOfSquares)) {
         const div = document.createElement('div');
-        div.style.width = '3rem';
-        div.style.height = '3rem';
+
+        let divSize = 48 / (numberOfSquares);
+
+        div.style.width = `${divSize}rem`;
+        div.style.height = `${divSize}rem`;
+
+        console.log(div.style.height);
 
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = '#c08009';
         });
 
-        motherOfDivs.appendChild(div);        
+        motherOfDivs.appendChild(div);
+        
+        console.log(`${counter} div created`);
 
         counter++;
     }
 }
 
-divGenerator()
+function clearMotherOfDivs() {
+    let child = motherOfDivs.lastElementChild;
 
-button.addEventListener('click', () => {
-    let numberOfSquares = prompt('Enter the number of squares on each side');
-    console.log(numberOfSquares*numberOfSquares);
-});
+    while (child) {
+        motherOfDivs.removeChild(child);
+        child = motherOfDivs.lastElementChild;
+    }
+}
+
+divGenerator()
