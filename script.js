@@ -20,15 +20,11 @@ function divGenerator() {
         div.style.width = `${divSize}rem`;
         div.style.height = `${divSize}rem`;
 
-        console.log(div.style.height);
-
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = '#c08009';
         });
 
         motherOfDivs.appendChild(div);
-        
-        console.log(`${counter} div created`);
 
         counter++;
     }
