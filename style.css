@@ -10,6 +10,14 @@ body {
     align-items: center;
 }
 
-div {
+div#container {
+    width: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+div#container > div {
     border: 1px solid coral;
+    flex-shrink: 0;
 }
