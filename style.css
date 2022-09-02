@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 
     background-color: #d8d6d6;
 }
@@ -22,4 +23,14 @@ div#container {
 div#container > div {
     border: 1px solid black;
     flex-shrink: 0;
+}
+
+button {
+    outline: none;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c08009;
+    color: white;
+    font-weight: bold;
 }
