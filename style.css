@@ -15,14 +15,15 @@ body {
 
 div#container {
     width: 48rem;
+    height: 48rem;
     display: flex;
     flex-wrap: wrap;
     
 }
 
 div#container > div {
-    border: 1px solid black;
     flex-shrink: 0;
+    border: 0.5px solid black;
 }
 
 button {
