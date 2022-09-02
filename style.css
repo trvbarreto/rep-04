@@ -11,7 +11,7 @@ body {
 }
 
 div#container {
-    width: 12rem;
+    width: 48rem;
     display: flex;
     flex-wrap: wrap;
     
