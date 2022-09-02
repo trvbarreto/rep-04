@@ -1,4 +1,5 @@
 const motherOfDivs = document.querySelector('#container');
+const button = document.querySelector('button');
 
 function divGenerator() {
     let counter = 0;
@@ -19,3 +20,8 @@ function divGenerator() {
 }
 
 divGenerator()
+
+button.addEventListener('click', () => {
+    let numberOfSquares = prompt('Enter the number of squares on each side');
+    console.log(numberOfSquares*numberOfSquares);
+});
