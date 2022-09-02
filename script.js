@@ -26,7 +26,7 @@ function divGenerator() {
         div.style.height = `${divSize}rem`;
 
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = '#c08009';
+            div.style.backgroundColor = randomRGB();
         });
 
         motherOfDivs.appendChild(div);
@@ -43,5 +43,13 @@ function clearMotherOfDivs() {
         child = motherOfDivs.lastElementChild;
     }
 };
+
+function randomRGB() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var RGBColor = "rgb(" + x + "," + y + "," + z + ")";  
+    return RGBColor;
+}
 
 divGenerator();
